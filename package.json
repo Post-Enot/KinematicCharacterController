@@ -1,0 +1,12 @@
+{
+  "name": "com.postenot.kcc",
+  "version": "0.0.3",
+  "displayName": "Kinematic Character Controller",
+  "description": "",
+  "author": {
+    "name": "PostEnot",
+    "email": "ve.vyshegorodsky.cold@gmail.com",
+    "url": "https://t.me/ProcyonNihil"
+  },
+  "type": "library"
+}

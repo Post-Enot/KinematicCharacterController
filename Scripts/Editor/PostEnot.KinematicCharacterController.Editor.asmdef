@@ -1,0 +1,18 @@
+{
+    "name": "PostEnot.KinematicCharacterController.Editor",
+    "rootNamespace": "PostEnot.KinematicCharacterController.Editor",
+    "references": [
+        "GUID:9503d3c908d45fe479f6179c319d6371"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
