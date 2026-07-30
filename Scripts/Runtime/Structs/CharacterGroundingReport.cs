@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿#nullable enable
+
+using UnityEngine;
 
 namespace PostEnot.KinematicCharacterController
 {
@@ -14,7 +16,7 @@ namespace PostEnot.KinematicCharacterController
         public Vector3 InnerGroundNormal;
         public Vector3 OuterGroundNormal;
 
-        public Collider GroundCollider;
+        public Collider? GroundCollider;
         public Vector3 GroundPoint;
 
         public void CopyFrom(CharacterTransientGroundingReport transientGroundingReport)

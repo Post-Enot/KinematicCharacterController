@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿#nullable enable
+
+using UnityEngine;
 
 namespace PostEnot.KinematicCharacterController
 {
@@ -15,7 +17,7 @@ namespace PostEnot.KinematicCharacterController
         public Vector3 OuterNormal;
 
         public bool ValidStepDetected;
-        public Collider SteppedCollider;
+        public Collider? SteppedCollider;
 
         public bool LedgeDetected;
         public bool IsOnEmptySideOfLedge;

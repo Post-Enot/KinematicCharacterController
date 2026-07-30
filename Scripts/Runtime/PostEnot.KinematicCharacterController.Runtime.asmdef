@@ -1,6 +1,6 @@
 {
     "name": "PostEnot.KinematicCharacterController.Runtime",
-    "rootNamespace": "",
+    "rootNamespace": "PostEnot.KinematicCharacterController",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -1,4 +1,6 @@
-﻿using System;
+﻿#nullable enable
+
+using System;
 using UnityEngine;
 
 namespace PostEnot.KinematicCharacterController
@@ -19,7 +21,7 @@ namespace PostEnot.KinematicCharacterController
         public bool LastMovementIterationFoundAnyGround;
         public CharacterTransientGroundingReport GroundingStatus;
 
-        public Rigidbody AttachedRigidbody;
+        public Rigidbody? AttachedRigidbody;
         public Vector3 AttachedRigidbodyVelocity;
     }
 }
