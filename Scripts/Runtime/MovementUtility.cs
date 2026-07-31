@@ -4,6 +4,12 @@ namespace PostEnot.Toolkits
 {
     public static class MovementUtility
     {
+        public static bool IsFacingTo(Vector3 normal, Vector3 forwardDirection, float maxAngle)
+        {
+            float angle = Vector3.Angle(forwardDirection, -normal.normalized);
+            return angle <= maxAngle;
+        }
+
         /// <summary>
         /// Calculates the velocity required to move the character to the target position over a specific deltaTime.
         /// Useful for when you wish to work with positions rather than velocities in the UpdateVelocity callback 

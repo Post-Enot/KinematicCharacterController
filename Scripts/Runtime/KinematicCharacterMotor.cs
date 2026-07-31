@@ -1122,7 +1122,8 @@ namespace PostEnot.KinematicCharacterController
                             probingPosition = groundSweepPosition + (groundSweepDirection * (groundSweepHit.distance - CollisionOffset));
                         }
 
-                        CharacterController.OnGroundHit(groundSweepHit.collider, groundSweepHit.normal, groundSweepHit.point, ref groundHitStabilityReport);
+                        GroundHitContext context = new(groundSweepHit.collider, groundSweepHit.normal, groundSweepHit.point);
+                        CharacterController.OnGroundHit(ref groundHitStabilityReport, context);
                         groundSweepingIsOver = true;
                     }
                     else
@@ -1306,8 +1307,8 @@ namespace PostEnot.KinematicCharacterController
                     }
                 }
             }
-
-            CharacterController.ProcessHitStabilityReport(hitCollider, hitNormal, hitPoint, atCharacterPosition, atCharacterRotation, ref stabilityReport);
+            HitStabilityContext context = new(hitCollider, hitNormal, hitPoint, atCharacterPosition, atCharacterRotation);
+            CharacterController.ProcessHitStabilityReport(ref stabilityReport, context);
         }
 
         /// <summary>
@@ -2217,7 +2218,8 @@ namespace PostEnot.KinematicCharacterController
                         Vector3 obstructionNormal = GetObstructionNormal(closestSweepHitNormal, moveHitStabilityReport.IsStable);
 
                         // Movement hit callback
-                        CharacterController.OnMovementHit(closestSweepHitCollider, closestSweepHitNormal, closestSweepHitPoint, ref moveHitStabilityReport);
+                        MovementHitContext context = new(closestSweepHitCollider, closestSweepHitNormal, closestSweepHitPoint);
+                        CharacterController.OnMovementHit(ref moveHitStabilityReport, context);
 
                         // Handle remembering rigidbody hits
                         if (interactiveRigidbodyHandling && closestSweepHitCollider.attachedRigidbody)
