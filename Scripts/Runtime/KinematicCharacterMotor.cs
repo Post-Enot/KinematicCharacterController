@@ -455,7 +455,7 @@ namespace PostEnot.KinematicCharacterController
         /// <summary>
         /// Specifies a Rigidbody to stay attached to
         /// </summary>
-        internal Rigidbody AttachedRigidbodyOverride { get; set; }
+        public Rigidbody AttachedRigidbodyOverride { get; set; }
 
         private readonly RaycastHit[] _internalCharacterHits = new RaycastHit[MaxHitsBudget];
         private readonly Collider[] _internalProbedColliders = new Collider[MaxCollisionBudget];
